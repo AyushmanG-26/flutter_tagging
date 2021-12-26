@@ -173,12 +173,14 @@ class _FlutterTaggingState<T extends Taggable>
     super.initState();
     _textController =
         widget.textFieldConfiguration.controller ?? TextEditingController();
+    print('creating or using focusNode');
     _focusNode = widget.textFieldConfiguration.focusNode ?? FocusNode();
   }
 
   @override
   void dispose() {
     _textController.dispose();
+    print('disposing focus node');
     _focusNode.dispose();
     super.dispose();
   }
@@ -262,6 +264,7 @@ class _FlutterTaggingState<T extends Taggable>
                   setState(() {});
                   widget.onChanged?.call();
                   _textController.clear();
+                  print('unfocusing focus node');
                   _focusNode.unfocus();
                 },
                 child: Builder(
