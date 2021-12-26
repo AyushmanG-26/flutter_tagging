@@ -166,6 +166,7 @@ class _FlutterTaggingState<T extends Taggable>
   late final TextEditingController _textController;
   late final FocusNode _focusNode;
   T? _additionItem;
+  static final Key globalKey = GlobalKey();
 
   @override
   void initState() {
@@ -189,6 +190,7 @@ class _FlutterTaggingState<T extends Taggable>
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         TypeAheadField<T>(
+          key: globalKey,
           getImmediateSuggestions: widget.enableImmediateSuggestion,
           debounceDuration: widget.debounceDuration,
           hideOnEmpty: widget.hideOnEmpty,
