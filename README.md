@@ -13,5 +13,5 @@ This is just a hack until the oringal repo is updated.
 
 ```
   flutter_tagging: 
-    git: https://github.com/bradintheusa/flutter_tagging
+    git: https://github.com/AyushmanG-26/flutter_tagging
 ```
