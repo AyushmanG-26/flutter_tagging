@@ -1,7 +1,7 @@
 # Flutter Tagging
 
 
-Forked from https://github.com/culjo/flutter_tagging
+Forked from https://github.com/cpf5193/flutter_tagging
 
 Based on https://github.com/sarbagyastha/flutter_tagging/
 
